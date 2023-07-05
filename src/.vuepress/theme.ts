@@ -1,77 +1,103 @@
-import { hopeTheme } from "vuepress-theme-hope";
-import { enNavbar, zhNavbar } from "./navbar/index.js";
-import { enSidebar, zhSidebar } from "./sidebar/index.js";
+import { hopeTheme } from 'vuepress-theme-hope'
+import { enNavbar, zhNavbar } from './navbar/index.js'
+import { enSidebar, zhSidebar } from './sidebar/index.js'
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: 'https://blugrag.github.io',
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: 'Mr.Hope',
+    url: 'https://blugrag.github.io',
   },
 
-  iconAssets: "fontawesome-with-brands",
+  iconAssets: 'fontawesome-with-brands',
 
-  logo: "/logo.svg",
+  logo: '/logo.svg',
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: 'vuepress-theme-hope/vuepress-theme-hope',
 
-  docsDir: "src",
+  docsDir: 'src',
 
   locales: {
-    "/": {
-      // navbar
-      navbar: enNavbar,
+    '/': {
+      // // navbar
+      // navbar: enNavbar,
 
-      // sidebar
-      sidebar: enSidebar,
+      // // sidebar
+      // sidebar: enSidebar,
 
-      footer: "Default footer",
+      // footer: "Default footer",
 
-      displayFooter: true,
+      // displayFooter: true,
 
-      metaLocales: {
-        editLink: "Edit this page on GitHub",
-      },
-    },
-
-    /**
-     * Chinese locale config
-     */
-    "/zh/": {
+      // metaLocales: {
+      //   editLink: "Edit this page on GitHub",
+      // },
       // navbar
       navbar: zhNavbar,
 
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "默认页脚",
+      footer: '默认页脚',
 
       displayFooter: true,
 
       // page meta
       metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
+        editLink: '在 GitHub 上编辑此页',
+      },
+    },
+    /**
+     * Chinese locale config
+     */
+    '/en/': {
+      // // navbar
+      // navbar: zhNavbar,
+
+      // // sidebar
+      // sidebar: zhSidebar,
+
+      // footer: "默认页脚",
+
+      // displayFooter: true,
+
+      // // page meta
+      // metaLocales: {
+      //   editLink: "在 GitHub 上编辑此页",
+      // },
+      // navbar
+      navbar: enNavbar,
+
+      // sidebar
+      sidebar: enSidebar,
+
+      footer: 'Default footer',
+
+      displayFooter: true,
+
+      metaLocales: {
+        editLink: 'Edit this page on GitHub',
       },
     },
   },
 
   encrypt: {
     config: {
-      "/demo/encrypt.html": ["1234"],
-      "/zh/demo/encrypt.html": ["1234"],
+      '/demo/encrypt.html': ['1234'],
+      '/zh/demo/encrypt.html': ['1234'],
     },
   },
 
   plugins: {
     // You should generate and use your own comment service
-    comment: {
-      provider: "Giscus",
-      repo: "vuepress-theme-hope/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
-      category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
-    },
+    // comment: {
+    //   provider: 'Giscus',
+    //   repo: 'vuepress-theme-hope/giscus-discussions',
+    //   repoId: 'R_kgDOG_Pt2A',
+    //   category: 'Announcements',
+    //   categoryId: 'DIC_kwDOG_Pt2M4COD69',
+    // },
 
     // All features are enabled for demo, only preserve features you need here
     mdEnhance: {
@@ -91,19 +117,19 @@ export default hopeTheme({
       mark: true,
       mermaid: true,
       playground: {
-        presets: ["ts", "vue"],
+        presets: ['ts', 'vue'],
       },
-      presentation: ["highlight", "math", "search", "notes", "zoom"],
+      presentation: ['highlight', 'math', 'search', 'notes', 'zoom'],
       stylize: [
         {
-          matcher: "Recommended",
+          matcher: 'Recommended',
           replacer: ({ tag }) => {
-            if (tag === "em")
+            if (tag === 'em')
               return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
+                tag: 'Badge',
+                attrs: { type: 'tip' },
+                content: 'Recommended',
+              }
           },
         },
       ],
@@ -171,4 +197,4 @@ export default hopeTheme({
     //   },
     // },
   },
-});
+})
