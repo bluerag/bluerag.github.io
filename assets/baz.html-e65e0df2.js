@@ -1,0 +1,1 @@
+import{_ as t}from"./plugin-vue_export-helper-c27b6911.js";import{o as c,c as s,a as e,b as o}from"./app-7a2e259a.js";const _={},a=e("p",null,"功能详情...",-1),n=e("p",null,[o("用来测试actions"),e("br"),o(" okok7yue5ri")],-1),r=[a,n];function l(i,d){return c(),s("div",null,r)}const u=t(_,[["render",l],["__file","baz.html.vue"]]);export{u as default};
